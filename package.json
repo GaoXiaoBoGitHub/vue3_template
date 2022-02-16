@@ -1,0 +1,54 @@
+{
+  "name": "vue3_template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .vue,.js,.jsx,.ts,.tsx ./ --max-warnings 0",
+    "lint:fix": "eslint --ext .vue,.js,jsx,.ts,.tsx ./ --max-warnings 0 --fix",
+    "stylelint": "stylelint src/**/*.{html,vue,sass,less}",
+    "stylelint:fix": "stylelint --fix src/**/*.{html,vue,sass,less}",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "husky": "^7.0.0",
+    "less": "^4.1.2",
+    "lint-staged": "^12.3.4",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.5.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-less": "^1.0.3",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.5.5",
+    "vite": "^2.8.0",
+    "vite-plugin-cdn-import": "^0.3.5",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "prettier --write",
+      "yarn lint:fix",
+      "git add ."
+    ],
+    "*.{html,vue,sass,less}": [
+      "yarn stylelint:fix",
+      "git add ."
+    ]
+  }
+}
