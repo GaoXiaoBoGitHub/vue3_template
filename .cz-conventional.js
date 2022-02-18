@@ -5,7 +5,7 @@ const headerLength = function (answers) {
 };
 
 const maxSummaryLength = function (answers) {
-  return 118 - headerLength(answers);
+  return 100 - headerLength(answers);
 };
 
 module.exports = {
@@ -50,7 +50,7 @@ module.exports = {
         },
         transformer: function (subject, answers) {
           const color = subject.length <= maxSummaryLength(answers) ? chalk.cyan : chalk.red;
-          return color(`(${subject.length})\n${subject}`);
+          return color(`(${subject.length}) ${subject}`);
         },
       },
       {
