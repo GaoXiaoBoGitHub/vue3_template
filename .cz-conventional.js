@@ -49,7 +49,7 @@ module.exports = {
           return true;
         },
         transformer: function (subject, answers) {
-          const color = subject.length > maxSummaryLength(answers) ? chalk.green : chalk.red;
+          const color = subject.length <= maxSummaryLength(answers) ? chalk.cyan : chalk.red;
           return color(`(${subject.length})\n${subject}`);
         },
       },
