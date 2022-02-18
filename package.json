@@ -16,9 +16,12 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "@vitejs/plugin-vue": "^2.2.0",
+    "commitizen": "^4.2.4",
     "eslint": "^8.9.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
@@ -40,13 +43,18 @@
     "vite-plugin-cdn-import": "^0.3.5",
     "vite-plugin-compression": "^0.5.1"
   },
+  "config": {
+    "commitizen": {
+      "path": "./.husky/cz-conventional.js"
+    }
+  },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
+    "src/**/*.{js,jsx,vue,ts,tsx}": [
       "prettier --write",
       "yarn lint:fix",
       "git add ."
     ],
-    "*.{html,vue,sass,less}": [
+    "src/**/*.{html,vue,sass,less}": [
       "yarn stylelint:fix",
       "git add ."
     ]
