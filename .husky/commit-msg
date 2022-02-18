@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "GIT_PARAMS $1 ---"
+echo "GIT_PARAMS $GIT_PARAMS"
 
-npx --no-install commitlint --edit $1
+npx --no-install commitlint -e $GIT_PARAMS
