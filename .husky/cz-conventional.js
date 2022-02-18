@@ -37,6 +37,11 @@ module.exports = {
         message: function (answers) {
           return `请输入一个简短的描述（最多${maxSummaryLength(answers)}个字符）:\n`;
         },
+        validate: function (subject, answers) {
+          if (subject.length == 0) return '--请输入简短描述--';
+          if (subject.length > maxSummaryLength(answers)) return `--描述长度小于或等于${maxSummaryLength(answers)}--`;
+          return true;
+        },
         transformer: function (subject, answers) {
           return `(${subject.length}) ${subject}`;
         },
