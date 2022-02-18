@@ -1,12 +1,5 @@
 module.exports = {
   prompter: function (cz, commit) {
-    // Let's ask some questions of the user
-    // so that we can populate our commit
-    // template.
-    //
-    // See inquirer.js docs for specifics.
-    // You can also opt to use another input
-    // collection library if you prefer.
     cz.prompt([
       {
         type: 'list',
@@ -20,7 +13,7 @@ module.exports = {
         default: '✨特性',
       },
     ]).then(function (answers) {
-      commit(answers.type);
+      commit('fix(all): test');
     });
   },
 };
