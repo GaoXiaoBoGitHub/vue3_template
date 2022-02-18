@@ -38,8 +38,8 @@ module.exports = {
           return `请输入一个简短的描述（最多${maxSummaryLength(answers)}个字符）:\n`;
         },
         validate: function (subject, answers) {
-          if (subject.length == 0) return '--请输入简短描述--';
-          if (subject.length > maxSummaryLength(answers)) return `--描述长度小于或等于${maxSummaryLength(answers)}--`;
+          if (subject.length == 0) return '--别想走，简短描述一定要填!--';
+          if (subject.length > maxSummaryLength(answers)) return `--文字太多了，要≤${maxSummaryLength(answers)}--`;
           return true;
         },
         transformer: function (subject, answers) {
