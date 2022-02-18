@@ -1,4 +1,4 @@
-// const chalk = require('chalk');
+const chalk = require('chalk');
 
 const headerLength = function (answers) {
   return answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0);
@@ -49,9 +49,8 @@ module.exports = {
           return true;
         },
         transformer: function (subject, answers) {
-          return `(${subject.length})\n${subject}`;
-          // const color = subject > maxSummaryLength(answers) ? chalk.green : chalk.red;
-          // return color(`(${subject.length})\n${subject}`);
+          const color = subject.length > maxSummaryLength(answers) ? chalk.green : chalk.red;
+          return color(`(${subject.length})\n${subject}`);
         },
       },
       {
