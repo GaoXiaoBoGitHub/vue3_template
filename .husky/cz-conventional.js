@@ -13,7 +13,7 @@ module.exports = {
         default: '✨特性',
       },
     ]).then(function (answers) {
-      commit('fix(all): test\n\n');
+      commit('fix(all): test');
     });
   },
 };
