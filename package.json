@@ -45,7 +45,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./.husky/cz-conventional.js"
+      "path": "./.cz-conventional.js"
     }
   },
   "lint-staged": {

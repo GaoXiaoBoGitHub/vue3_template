@@ -1,3 +1,5 @@
+// const chalk = require('chalk');
+
 const headerLength = function (answers) {
   return answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0);
 };
@@ -30,8 +32,8 @@ module.exports = {
         type: 'input',
         name: 'scope',
         message: function (answers) {
-          const issues = answers.type === '🐛修复' ? '/禅道编号' : '';
-          return `此更改的范围(组件/文件名${issues}): (按回车键跳过)`;
+          const issues = answers.type === 'fix' ? '/禅道编号' : '';
+          return `此更改的范围(组件名/文件名${issues}): (按回车键跳过)`;
         },
       },
       {
@@ -42,11 +44,14 @@ module.exports = {
         },
         validate: function (subject, answers) {
           if (subject.length == 0) return '别想走，简短描述一定要填!!!';
-          if (subject.length > maxSummaryLength(answers)) return `文字太多了，文字长度要 ≤${maxSummaryLength(answers)} 哦!!!`;
+          if (subject.length > maxSummaryLength(answers))
+            return `文字太多了，文字长度要 ≤${maxSummaryLength(answers)} 哦!!!`;
           return true;
         },
         transformer: function (subject, answers) {
           return `(${subject.length})\n${subject}`;
+          // const color = subject > maxSummaryLength(answers) ? chalk.green : chalk.red;
+          // return color(`(${subject.length})\n${subject}`);
         },
       },
       {
