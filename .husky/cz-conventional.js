@@ -59,7 +59,7 @@ module.exports = {
       const scope = answers.scope ? '(' + answers.scope + ')' : '';
       const issues = answers.issues ? '(' + answers.issues + ')' : '';
       const head = type + scope + ': ' + subject + issues;
-      commit([head, body].filter((x) => x).join('\n\n') + ' -m');
+      commit([head, body].filter((x) => x).join('\n\n'));
     });
   },
 };
