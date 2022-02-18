@@ -3,7 +3,7 @@ const headerLength = function (answers) {
 };
 
 const maxSummaryLength = function (answers) {
-  return 80 - headerLength(answers);
+  return 118 - headerLength(answers);
 };
 
 module.exports = {
@@ -29,35 +29,30 @@ module.exports = {
       {
         type: 'input',
         name: 'scope',
-        message: '此更改的范围 (例如组件或文件名): (按回车键跳过)',
+        message: function (answers) {
+          const issues = answers.type === '🐛修复' ? '/禅道编号' : '';
+          return `此更改的范围(组件/文件名${issues}): (按回车键跳过)`;
+        },
       },
       {
         type: 'input',
         name: 'subject',
         message: function (answers) {
-          return `请输入一个简短的描述（最多${maxSummaryLength(answers)}个字符）:\n`;
+          return `请输入一个简短的描述(最多${maxSummaryLength(answers)}个字符):`;
         },
         validate: function (subject, answers) {
-          if (subject.length == 0) return '--别想走，简短描述一定要填!--';
-          if (subject.length > maxSummaryLength(answers)) return `--文字太多了，要≤${maxSummaryLength(answers)}--`;
+          if (subject.length == 0) return '别想走，简短描述一定要填!!!';
+          if (subject.length > maxSummaryLength(answers)) return `文字太多了，文字长度要 ≤${maxSummaryLength(answers)} 哦!!!`;
           return true;
         },
         transformer: function (subject, answers) {
-          return `(${subject.length}) ${subject}`;
+          return `(${subject.length})\n${subject}`;
         },
       },
       {
         type: 'input',
         name: 'body',
         message: '请输入详细说明: (按回车跳过)\n',
-      },
-      {
-        type: 'input',
-        name: 'issues',
-        message: '请输入本次bug修复对对应的禅道编号:\n',
-        when: function (answers) {
-          return answers.type === '🐛修复';
-        },
       },
     ]).then(function (answers) {
       const { type, subject, body } = answers;
