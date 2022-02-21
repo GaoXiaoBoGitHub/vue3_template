@@ -54,11 +54,12 @@ export default defineConfig((env) => {
     },
     css: {
       preprocessorOptions: {
+        // 自动全局引入less变量文件
         less: {
+          javascriptEnabled: true,
           modifyVars: {
             hack: `true;@import (reference) '${resolve('src/style/var.less')}';`,
           },
-          javascriptEnabled: true,
         },
       },
     },
