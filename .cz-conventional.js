@@ -57,8 +57,15 @@ module.exports = {
         name: 'body',
         message: '填写更加详细的变更描述，使用"|"换行: (回车跳过)\n',
       },
+      {
+        type: 'confirm',
+        name: 'save',
+        message: '确认提交',
+        default: true,
+      },
     ]).then(function (answers) {
-      const { type, subject, body } = answers;
+      const { type, subject, body, save } = answers;
+      if (!save) return;
       const scope = answers.scope ? '(' + answers.scope + ')' : '';
       const issues = answers.issues ? '(' + answers.issues + ')' : '';
       const head = type + scope + ': ' + subject + issues;
