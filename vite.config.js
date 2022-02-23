@@ -1,6 +1,6 @@
 import { defineConfig, loadEnv } from 'vite';
 import { resolve } from 'path';
-import vitePlugins from './build/plugin/index';
+import presets from './build/presets';
 
 export default defineConfig((env) => {
   // 加载当前模式下的环境变量，对应关系为：
@@ -9,7 +9,7 @@ export default defineConfig((env) => {
   const viteEnv = loadEnv(env.mode, `.env.${env.mode}`);
   return {
     base: viteEnv.VITE_BASE,
-    plugins: vitePlugins(env.mode),
+    plugins: presets(env.mode),
     resolve: {
       // 别名设置，如果需要在编辑器能更好的识别别名，需要配置jsconfig.json文件
       alias: {

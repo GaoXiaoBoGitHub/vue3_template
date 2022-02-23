@@ -1,6 +1,7 @@
 {
   // 配置表示继承其他模块相关的eslint 配置
   "extends": [
+    "./build/eslintrc-auto-import.json",
     "plugin:@typescript-eslint/recommended",
     "eslint-config-airbnb-base",
     "plugin:vue/vue3-recommended",
@@ -46,6 +47,12 @@
   },
   //  配置自定义eslint规则覆盖或者关闭原有相关配置
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 150
+      }
+    ],
     "no-console": "off", // 允许使用 console
     "radix": "off", // parseInt方法不强制使用第二个参数
     "no-continue": "off", // 允许使用 continue

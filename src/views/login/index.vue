@@ -1,5 +1,6 @@
 <template>
-  <router-view></router-view>
+  <img alt="Vue logo" class="mx-auto md:bg-red-500" src="@/assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
 <script setup></script>

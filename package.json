@@ -13,7 +13,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "@vueuse/core": "^7.6.2",
+    "axios": "^0.26.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.11",
+    "tdesign-vue-next": "^0.8.1",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
@@ -39,9 +45,13 @@
     "stylelint-less": "^1.0.3",
     "stylelint-order": "^5.0.0",
     "typescript": "^4.5.5",
+    "unplugin-auto-import": "^0.6.0",
+    "unplugin-vue-components": "^0.17.18",
     "vite": "^2.8.0",
     "vite-plugin-cdn-import": "^0.3.5",
-    "vite-plugin-compression": "^0.5.1"
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-windicss": "^1.7.1",
+    "windicss": "^3.4.3"
   },
   "config": {
     "commitizen": {
