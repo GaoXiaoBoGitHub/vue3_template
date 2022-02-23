@@ -14,7 +14,7 @@ module.exports = {
       {
         type: 'list',
         name: 'type',
-        message: '请选择提交性质:',
+        message: '请选择本次变更的提交类型:',
         choices: [
           { value: 'feat', name: '✨功能:  新增功能' },
           { value: 'fix', name: '🐛修复:  修复Bug' },
@@ -26,14 +26,14 @@ module.exports = {
           { value: 'chore', name: '🔧工具:  开发工具变动(构建、脚手架工具等)' },
           { value: 'revert', name: '⏪回滚:  回滚Commit' },
         ],
-        default: '✨特性',
+        default: 'feat',
       },
       {
         type: 'input',
         name: 'scope',
         message: function (answers) {
           const issues = answers.type === 'fix' ? '/禅道编号' : '';
-          return `此更改的范围(组件名/文件名${issues}): (可选)`;
+          return `此更改的范围(组件名/文件名${issues}): (回车跳过)`;
         },
       },
       {
@@ -43,7 +43,7 @@ module.exports = {
           return `请输入一个简短的变更描述(最多${maxSummaryLength(answers)}个字符):`;
         },
         validate: function (subject, answers) {
-          if (subject.length == 0) return '别想走，简短描述一定要填!!!';
+          if (subject.length == 0) return '不要走，简短描述一定要填!!!';
           if (subject.length > maxSummaryLength(answers)) return `文字太多了，文字长度要 ≤${maxSummaryLength(answers)} 哦!!!`;
           return true;
         },
@@ -55,7 +55,7 @@ module.exports = {
       {
         type: 'input',
         name: 'body',
-        message: '填写更加详细的变更描述: (可选)\n',
+        message: '填写更加详细的变更描述，使用"|"换行: (回车跳过)\n',
       },
     ]).then(function (answers) {
       const { type, subject, body } = answers;
