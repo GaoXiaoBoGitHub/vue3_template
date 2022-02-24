@@ -55,7 +55,7 @@ module.exports = {
       {
         type: 'input',
         name: 'body',
-        message: '填写更加详细的变更描述，使用"|"换行: (回车跳过)\n',
+        message: '填写更加详细的变更描述(使用"|"换行): (回车跳过)\n',
       },
       {
         type: 'confirm',
