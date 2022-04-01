@@ -5,7 +5,7 @@ import colors from 'windicss/colors';
 export default defineConfig({
   darkMode: 'class',
   plugins: [typography()],
-  // preflight: false, // 是否重置css样式
+  preflight: false, // 是否重置css样式
   theme: {
     //   fontFamily: {
     //     sans: ['Open Sans', 'ui-sans-serif', 'system-ui'],

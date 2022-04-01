@@ -58,7 +58,7 @@ export default defineConfig((env) => {
         less: {
           javascriptEnabled: true,
           modifyVars: {
-            hack: `true;@import (reference) '${resolve('src/style/var.less')}';`,
+            hack: `true;@import (reference) '${resolve('src/styles/var.less')}';`,
           },
         },
       },

@@ -1,7 +1,7 @@
 {
   "name": "vue3_template",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,9 +13,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@the-sea/cli": "^1.1.0",
-    "@the-sea/components": "^1.1.0",
-    "@the-sea/utils": "^1.1.2",
+    "@the-sea/cli": "^1.0.1",
+    "@the-sea/components": "^1.0.3",
+    "@the-sea/utils": "^1.0.4",
     "@vueuse/core": "^7.6.2",
     "axios": "^0.26.0",
     "nprogress": "^0.2.0",

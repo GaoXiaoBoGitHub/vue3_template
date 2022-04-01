@@ -1,8 +1,8 @@
 import { Http, storage } from '@the-sea/utils';
-
+// import Http from './http';
 import Loading from './loading';
 
-console.log('storage', storage);
+// console.log('storage', storage);
 
 const ajax = new Http(`${import.meta.env.VITE_API_BASEURL}`, {
   parmasExclude: ['current'],

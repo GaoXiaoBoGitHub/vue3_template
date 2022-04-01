@@ -1,5 +1,5 @@
 <template>
-  <TsResult title="抱歉，您访问的页面不存在。" status="404">
+  <TsResult title="抱歉，您无权访问此页面。" status="403" sub-title="">
     <t-button theme="primary" @click="goBack"> 返回 </t-button>
   </TsResult>
 </template>

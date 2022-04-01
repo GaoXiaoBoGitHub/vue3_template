@@ -3,6 +3,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import NProgress from 'nprogress';
+import Api from '../api';
 import exceptionRoutes from '@/router/route.exception';
 import asyncRoutes from '@/router/route.async';
 import commonRoutes from '@/router/route.common';
@@ -30,6 +31,8 @@ const router = createRouter({
  */
 router.beforeEach((to, from) => {
   console.log('全局路由前置守卫：to,from\n', to, from);
+  // 取消正在发送请求的接口
+  Api.cleanPendingRequest();
   // 设置页面标题
   document.title = to.meta.title || import.meta.env.VITE_APP_TITLE;
   if (!NProgress.isStarted()) {
