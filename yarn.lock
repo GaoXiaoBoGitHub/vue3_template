@@ -448,10 +448,18 @@
   resolved "https://registry.npmmirror.com/@popperjs/core/-/core-2.11.2.tgz#830beaec4b4091a9e9398ac50f865ddea52186b9"
   integrity sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==
 
-"@rollup/pluginutils@^4.0.0", "@rollup/pluginutils@^4.1.2":
+"@rollup/pluginutils@^4.0.0":
   version "4.1.2"
   resolved "https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-4.1.2.tgz#ed5821c15e5e05e32816f5fb9ec607cdf5a75751"
   integrity sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==
+  dependencies:
+    estree-walker "^2.0.1"
+    picomatch "^2.2.2"
+
+"@rollup/pluginutils@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-4.2.0.tgz#a14bbd058fdbba0a5647143b16ed0d86fb60bd08"
+  integrity sha512-2WUyJNRkyH5p487pGnn4tWAsxhEFKN/pT8CMgHshd5H+IXkOnKvKZwsz5ZWz+YCXkleZRAU5kwbfgF8CPfDRqA==
   dependencies:
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
@@ -1043,6 +1051,13 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+brace-expansion@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmmirror.com/brace-expansion/-/brace-expansion-2.0.1.tgz#1edc459e0f0c548486ecf9fc99f2221364b9a0ae"
+  integrity sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==
+  dependencies:
+    balanced-match "^1.0.0"
+
 braces@^3.0.1, braces@~3.0.2:
   version "3.0.2"
   resolved "https://registry.npmmirror.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
@@ -1194,7 +1209,7 @@ chardet@^0.7.0:
   resolved "https://registry.npmmirror.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chokidar@^3.5.2:
+chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.npmmirror.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -3455,6 +3470,13 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
+magic-string@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.npmmirror.com/magic-string/-/magic-string-0.26.1.tgz#ba9b651354fa9512474199acecf9c6dbe93f97fd"
+  integrity sha512-ndThHmvgtieXe8J/VGPjG+Apu7v7ItcD5mhEIvOscWjPF/ccOiLxHaSuCAS2G+3x4GKsAbT8u7zdyamupui8Tg==
+  dependencies:
+    sourcemap-codec "^1.4.8"
+
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
   resolved "http://localhost:4873/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -3620,6 +3642,13 @@ minimatch@^3.0.4:
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
+
+minimatch@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmmirror.com/minimatch/-/minimatch-5.0.1.tgz#fb9022f7528125187c92bd9e9b6366be1cf3415b"
+  integrity sha512-nLDxIFRyhDblz3qMuq+SoRZED4+miJ/G+tdDrjkkkRnjAsBexeGpgjLEQ0blJy7rHhR2b93rhQY4SvyWu9v03g==
+  dependencies:
+    brace-expansion "^2.0.1"
 
 minimist-options@4.1.0:
   version "4.1.0"
@@ -4378,7 +4407,7 @@ resolve-global@1.0.0, resolve-global@^1.0.0:
   dependencies:
     global-dirs "^0.1.1"
 
-resolve@^1.10.0, resolve@^1.20.0, resolve@^1.21.0, resolve@^1.22.0:
+resolve@^1.10.0, resolve@^1.20.0, resolve@^1.22.0:
   version "1.22.0"
   resolved "https://registry.npmmirror.com/resolve/-/resolve-1.22.0.tgz#5e0b8c67c15df57a89bdbabe603a002f21731198"
   integrity sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==
@@ -4614,7 +4643,7 @@ source-map@^0.6.1, source-map@~0.6.0:
   resolved "https://registry.npmmirror.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-sourcemap-codec@^1.4.4:
+sourcemap-codec@^1.4.4, sourcemap-codec@^1.4.8:
   version "1.4.8"
   resolved "https://registry.npmmirror.com/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
@@ -5251,39 +5280,40 @@ universalify@^2.0.0:
   resolved "https://registry.npmmirror.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
-unplugin-auto-import@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.npmmirror.com/unplugin-auto-import/-/unplugin-auto-import-0.6.0.tgz#5527baf053bc109bff74e827dfce1d006f6a0ee3"
-  integrity sha512-joItLHCozByEsKawhFTfterlZOp8EYIAOpuWKx5xq0SdLOQtvbEcfkdhLxWIsMOH9yXNY5vnXYRONW0XxjVDlg==
+unplugin-auto-import@^0.6.9:
+  version "0.6.9"
+  resolved "https://registry.npmmirror.com/unplugin-auto-import/-/unplugin-auto-import-0.6.9.tgz#0ecdc7cf38aaf94f22358b56703e059f41b6f367"
+  integrity sha512-IqgT7AoRrNQwNhiF/wDH3sMEDX8SqCYBEgJzwdg5441b5aiC5VwZz0J0wYqkaKu89YkZE9DG6rQ2JpFfZv1iiQ==
   dependencies:
     "@antfu/utils" "^0.5.0"
-    "@rollup/pluginutils" "^4.1.2"
+    "@rollup/pluginutils" "^4.2.0"
     local-pkg "^0.4.1"
-    magic-string "^0.25.7"
+    magic-string "^0.26.1"
     resolve "^1.22.0"
-    unplugin "^0.3.2"
+    unplugin "^0.4.0"
 
-unplugin-vue-components@^0.17.18:
-  version "0.17.18"
-  resolved "https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.17.18.tgz#d647f85940d78f2be66620b9f1ac1ea232edbfc5"
-  integrity sha512-4wvJnSShTXCnZpO1G6h0DlHjBXap0JqzFyU84guMT6EH0shUZZ3TAta4pDa8nNeWAtcJVTF9uQswePq1elhpKQ==
+unplugin-vue-components@^0.18.5:
+  version "0.18.5"
+  resolved "https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.18.5.tgz#96dfad540100ed8ae8895e65c32d9b37886dc5c5"
+  integrity sha512-VPA6z/4pcKRDYtWu1H+FIpV0MADlFKG3q7YMVFzNFC3EhMVZ4WuBJ76490oKyauguNw1T1obLCuxNU9JzJ0oAQ==
   dependencies:
-    "@antfu/utils" "^0.4.0"
-    "@rollup/pluginutils" "^4.1.2"
-    chokidar "^3.5.2"
+    "@antfu/utils" "^0.5.0"
+    "@rollup/pluginutils" "^4.2.0"
+    chokidar "^3.5.3"
     debug "^4.3.3"
     fast-glob "^3.2.11"
     local-pkg "^0.4.1"
-    magic-string "^0.25.7"
-    minimatch "^3.0.4"
-    resolve "^1.21.0"
-    unplugin "^0.3.0"
+    magic-string "^0.26.1"
+    minimatch "^5.0.1"
+    resolve "^1.22.0"
+    unplugin "^0.4.0"
 
-unplugin@^0.3.0, unplugin@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.npmmirror.com/unplugin/-/unplugin-0.3.2.tgz#5113b13b90df14f92e17ddafed9d465bb18d2ca6"
-  integrity sha512-5d0DMYNKZU+S9eZUiBfw6Co32eRg8myUgBPoWSqG/wDFCUE/WznfSsJnZWi1P9l69x4uLJqt2qVq1xW/AsXFrw==
+unplugin@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.npmmirror.com/unplugin/-/unplugin-0.4.0.tgz#43a923f0267f8834118a926c406131d1d84a1358"
+  integrity sha512-4ScITEmzlz1iZW3tkz+3L1V5k/xMQ6kjgm4lEXKxH0ozd8/OUWfiSA7RMRyrawsvq/t50JIzPpp1UyuSL/AXkA==
   dependencies:
+    chokidar "^3.5.3"
     webpack-virtual-modules "^0.4.3"
 
 uri-js@^4.2.2:

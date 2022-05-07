@@ -11,4 +11,6 @@ const asyncRoutes = [
   },
 ];
 
-export default asyncRoutes;
+// 开发环境使用定义好的路由
+// 生产环境根据接口返回数据生成路由
+export default import.meta.env.DEV ? asyncRoutes : [];

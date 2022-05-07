@@ -4,7 +4,7 @@ const exceptionRoutes = [
     path: '/403',
     name: '403',
     meta: {
-      title: '需要登录',
+      title: '无访问权限',
     },
     component: () => import('@/views/exception/403.vue'),
   },
@@ -12,7 +12,7 @@ const exceptionRoutes = [
     path: '/404',
     name: '404',
     meta: {
-      title: '非常抱歉,页面走丢了',
+      title: '页面走丢了',
     },
     component: () => import('@/views/exception/404.vue'),
   },
@@ -20,7 +20,7 @@ const exceptionRoutes = [
     path: '/500',
     name: '500',
     meta: {
-      title: '非常抱歉, 服务器出错了',
+      title: '服务器出错了',
     },
     component: () => import('@/views/exception/500.vue'),
   },

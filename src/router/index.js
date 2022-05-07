@@ -1,6 +1,6 @@
 // 引入可以不用写，已使用AutoImport自动导入，更多查看build/auto-import.d.ts
 // 参考链接: github.com/antfu/unplugin-auto-import
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import NProgress from 'nprogress';
 import Api from '../api';
@@ -19,7 +19,7 @@ const routes = [
 
 const router = createRouter({
   // 新的vue-router4 使用 history路由模式 和 base前缀
-  history: createWebHistory(import.meta.env.VITE_BASE),
+  history: createWebHashHistory(import.meta.env.VITE_BASE),
   routes,
 });
 

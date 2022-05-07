@@ -4,8 +4,18 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./../src/components/HelloWorld.vue')['default']
+    Header: typeof import('./../src/components/Header.vue')['default']
+    Menu: typeof import('./../src/components/Menu.vue')['default']
+    TAside: typeof import('tdesign-vue-next')['Aside']
+    TAvatar: typeof import('tdesign-vue-next')['Avatar']
     TButton: typeof import('tdesign-vue-next')['Button']
+    TContent: typeof import('tdesign-vue-next')['Content']
+    THeader: typeof import('tdesign-vue-next')['Header']
+    THeadMenu: typeof import('tdesign-vue-next')['HeadMenu']
+    TIcon: typeof import('tdesign-vue-next')['Icon']
+    TLayout: typeof import('tdesign-vue-next')['Layout']
+    TMenu: typeof import('tdesign-vue-next')['Menu']
+    TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
   }
 }
 

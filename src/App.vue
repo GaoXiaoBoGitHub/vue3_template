@@ -1,18 +1,28 @@
 <template>
-  <router-view></router-view>
+  <router-view v-if="isFullScreen"></router-view>
+  <t-layout v-else class="w-screen h-screen">
+    <Header></Header>
+    <t-layout>
+      <Menu></Menu>
+      <t-content class="content-wrap">
+        <router-view></router-view>
+      </t-content>
+    </t-layout>
+  </t-layout>
 </template>
 
-<script setup></script>
+<script setup>
+const isFullScreen = ref(true);
+</script>
 
-<style>
+<style lang="less" scoped>
 #app {
   width: 100%;
   height: 100vh;
-  /* margin-top: 60px; */
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  /* text-align: center; */
+  .content-wrap {
+    padding: 0 20px;
+    margin: 10px;
+    background: #fff;
+  }
 }
 </style>
